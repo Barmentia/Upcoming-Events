@@ -1,0 +1,30 @@
+<div [routerLink]="['/events', eventField.id]" class="well overwell thumbnail">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{ eventField?.name }} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Date:</strong> {{ eventField?.date }}</div>
+      <div [ngClass]="getStartTimeClass()" [ngStyle]="getStartTimeStyle()"
+        [ngSwitch]="eventField?.time"><strong>Time:</strong> {{ eventField?.time }}
+        <span *ngSwitchCase="'8:00 am'"> - Early Start</span>
+        <span *ngSwitchCase="'10:00 am'"> - Late Start</span>
+        <span *ngSwitchDefault> - Normal Start</span>
+      </div>
+      <div><strong>Price:</strong> ${{ eventField?.price }}</div>
+      <div [hidden]="!event?.onlineUrl"><strong>Url:</strong>
+        <a href="{{eventField?.onlineUrl}}" target="_blank"> {{ eventField?.onlineUrl }}</a></div>
+    </div>
+    <div class="col-md-6" *ngIf="eventField?.location">
+      <address>
+        <strong>Address:</strong><br />
+        {{ eventField?.location?.address }}<br />
+        {{ eventField?.location?.city }}, {{ eventField?.location?.country }}
+      </address>
+    </div>
+  </div>
+</div>
