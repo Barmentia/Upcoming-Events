@@ -1,3 +1,4 @@
+import { EventsListResolverService } from './services/events-list-resolver.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -30,7 +31,8 @@ import { EventRouteActivatorService } from './services/event-route-activator.ser
   providers: [
     EventService,
     ToastrService,
-    EventRouteActivatorService
+    EventRouteActivatorService,
+    EventsListResolverService
   ],
   bootstrap: [EventsAppComponent]
 })

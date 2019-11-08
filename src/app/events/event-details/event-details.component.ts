@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class EventDetailsComponent implements OnInit {
 
   event: any;
+  reviewed: false;
 
   constructor(private eventService: EventService, private route: ActivatedRoute) { }
 

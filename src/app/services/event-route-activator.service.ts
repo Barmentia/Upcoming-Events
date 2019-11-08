@@ -19,4 +19,8 @@ export class EventRouteActivatorService implements CanActivate {
     return eventExists;
 
   }
+
+  // canDeactivate(component: EventDetailsComponent) {
+  //   return component.reviewed;
+  // }
 }
