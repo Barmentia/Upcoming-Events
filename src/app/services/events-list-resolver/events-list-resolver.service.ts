@@ -1,7 +1,7 @@
-import { EventService } from './event-service.service';
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { EventService } from '../event/event-service.service';
 
 @Injectable({
   providedIn: 'root'

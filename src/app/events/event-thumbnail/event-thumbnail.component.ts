@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { IEvent } from '../../models/event.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-event-thumbnail',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 export class EventThumbnailComponent implements OnInit {
 
   // Input decorator tells Angular this "eventField" variable will be pass from another component.
-  @Input() eventField: any;
+  @Input() eventField: IEvent;
 
   // Example of use of Local variable accessed from a different component.
   // someProterty: any = 'some value';
